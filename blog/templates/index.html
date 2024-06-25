@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block blog %}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+
+            <article>
+                <h2></h2>
+                <br>
+            </article>
+
+            {% for blog in blogs %}
+            <div class="d-flex flex-row ">
+                <div class="p-2"> <img class="img-fluid " style="width: 200px;height: auto;" src="{{blog.image.url}}">
+                </div>
+                <div class="bd-he" style="white-space:nowrap">
+                    <a href="/blog/{{blog.id}}">{{blog.title}} </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}

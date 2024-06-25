@@ -1,0 +1,29 @@
+
+{% extends 'base.html'%}
+{% block blog_form %}
+<h1>This is blog form</h1>
+<div class="container">
+    <form method="post" >
+        {% csrf_token%}
+    <div class="mb-3">
+      <label for="InputTitle" class="form-label">Title</label>
+      <input type="text" class="form-control" id="InputTitle" aria-describedby="titleHelp">
+    </div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Create Image</label>
+        <input class="form-control" type="file" id="imageFile">
+      </div>
+      <div class="mb-3">
+        <label for="contentarea" class="form-label">Content</label>
+        <textarea class="form-control" id="contentarea" rows="3"></textarea>
+      </div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Category</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock%}
