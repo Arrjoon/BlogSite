@@ -28,9 +28,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('api/',include('blog.urls')),
-    # path('blog/<int:id>',views.blog_content,name='blog_content'),
-    # path('blog/form/',views.blog_form,name='blog_form'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('blog/<int:id>',views.blog_content,name='blog_content'),
+    path('blog/form/',views.blog_form,name='blog_form'),
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
