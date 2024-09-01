@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'Blogsite.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,os.getenv('SQLITE_DB')),
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR,os.getenv('SQLITE_DB')),
+    # }
 }
 
 
