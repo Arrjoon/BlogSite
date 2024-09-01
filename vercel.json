@@ -1,11 +1,17 @@
+
 {
   "version": 2,
   "builds": [
     {
       "src": "Blogsite/wsgi.py",
       "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
       "config": {
-        "runtime": "python3.12"
+        "distDir": "staticfiles"
       }
     }
   ],
